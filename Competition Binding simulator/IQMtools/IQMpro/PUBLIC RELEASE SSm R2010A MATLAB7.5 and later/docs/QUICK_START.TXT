@@ -1,0 +1,5 @@
+
+If you want a quick start without reading documentation,
+just read SSm_HELP.txt and then go to the ..\examples 
+and ..\doc\examples directories and see how different problems 
+are implemented.

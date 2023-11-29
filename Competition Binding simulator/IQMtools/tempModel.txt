@@ -1,0 +1,60 @@
+********** MODEL NAME
+FA_binding_with_NS_and_two_competitive_ligands
+
+********** MODEL NOTES
+
+
+********** MODEL STATES
+d/dt(C) = -R2  %competitor nM                                                                           
+d/dt(L) = -R1-R3  %ligand nM                                                                            
+d/dt(NBV) = -R3  %non-specific binding sites nM                                                         
+d/dt(NBVL) = +R3  %non-specifically bound ligand                                                        
+d/dt(R) = (-R1-R2-R4)  %receptor :D, µl ja mitte nM !!                                                  
+d/dt(RC) = +R2  %receptor-competitor                                                                    
+d/dt(RL) = +R1  %receptor-ligand                                                                        
+d/dt(RC2) = +R4  %receptor competitive ligand 2 complex formation                                       
+d/dt(C2) = -R4  %competitive ligand 2 is consumed in the reaction with the receptor                     
+                                                                                                        
+C(0) = 0                                                                                                
+L(0) = 3                                                                                                
+NBV(0) = 0                                                                                              
+NBVL(0) = 0                                                                                             
+R(0) = 0                                                                                                
+RC(0) = 0                                                                                               
+RL(0) = 0                                                                                               
+RC2(0) = 0                                                                                              
+C2(0) = 0
+
+********** MODEL PARAMETERS
+kf1 = 0.000506133                                                                                       
+kr1 = 5.84528e-05                                                                                       
+kf2 = 0.000953399                                                                                       
+kr2 = 0.223469                                                                                          
+kf3 = 0.000435169                                                                                       
+kr3 = 631.066                                                                                           
+kf4 = 0.000953399                                                                                       
+kr4 = 0.223469                                                                                          
+Afree = 0.0856377  %free anisotropy                                                                     
+Arl = 0.295232  %bound complex anisotropy                                                               
+Anl = 0.0319784  %bound non-specific anisotropy                                                         
+Rcommon = 0.411112  %factor which converts receptor from microliters to nanomolar concentration         
+NBVcommon = 200  %factor which converts nonspecific binding site from volume to nanomolar conenctration 
+V = 50  %BV solution in µl
+
+********** MODEL VARIABLES
+FA = Afree.*L./(L+RL+NBVL)+Arl.*RL./(L+RL+NBVL)+Anl.*NBVL./(L+RL+NBVL)
+
+********** MODEL REACTIONS
+R1 = kf1*L*R-(((((kr1*RL))))) {reversible}                                                              
+R2 = kf2*C*R-(((((kr2*RC))))) {reversible}                                                              
+R3 = kf3*L*NBV-(((((kr3*NBVL))))) {reversible}                                                          
+R4 = kf4*C2*R-RC2*kr4 {reversible}
+
+********** MODEL FUNCTIONS
+
+
+********** MODEL EVENTS
+Initialize = ge(time,0.01),NBV,NBVcommon*V+NBV,R,R+Rcommon*V
+
+********** MODEL MATLAB FUNCTIONS
+

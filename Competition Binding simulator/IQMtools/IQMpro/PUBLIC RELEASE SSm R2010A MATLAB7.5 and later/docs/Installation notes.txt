@@ -1,0 +1,25 @@
+28-October-2010
+******************************
+SSm TOOLBOX INSTALLATION NOTES
+******************************
+
+-- SSmGO Toolbox R2010A --
+
+Requirements:
+
+- Matlab 6.5 or higher (tested with 6.5 to 7.8 under Windows)
+- Matlab Optimization Toolbox (for using some of the local solvers, like e.g., fmincon or fminsearch)
+
+Note: the current full version is for Windows only. Some features may not work under linux.
+
+Installation:
+1- Unzip the .zip (or .rar) archive in your PC (do not change the dir structure)
+2- Start a Matlab session
+3- Type "which ssm_kernel". If you get a non-empty string, you may need to remove an older version of the SSmGO Toolbox from the Matlab path
+5- Go to the root folder in which you unzipped the toolbox
+5- Type "ssm_startup"
+6- Start using SSmGO Toolbox (see tutorial to know how to implement optimization problems)
+
+Questions/bug reports:
+
+Send email to gingproc@iim.csic.es

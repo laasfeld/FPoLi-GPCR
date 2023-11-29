@@ -1,0 +1,21 @@
+References for SSmGO Toolbox
+****************************
+
+*****
+SSm *
+*****
+1- Rodriguez-Fernandez, M., J. A. Egea and J. R. Banga (2006) Novel Metaheuristic for Parameter Estimation in Nonlinear Dynamic Biological Systems. BMC Bioinformatics 7:483. 
+(Downloadable at http://www.biomedcentral.com/content/pdf/1471-2105-7-483.pdf)
+
+2- Egea, J.A., M. Rodriguez-Fernandez, J. R. Banga and R. Martí (2007) Scatter Search for chemical and bioprocess optimization. Journal of Global Optimization 37(3):481-503.
+
+3- Egea, J.A. (2008) New heuristics for global optimization of complex bioprocesses. PhD Thesis. University of Vigo (Spain).
+(Downloadable at http://digital.csic.es/bitstream/10261/4598/1/Tesis%20JoseEgea.pdf)
+
+
+
+*****
+eSS *
+*****
+4- Egea, J.A., Balsa-Canto, E., García, M.G., & Banga, J.R. (2009). Dynamic optimization of nonlinear processes with an enhanced scatter search method.  Industrial and Engineering Chemistry Research 48(9):4388-4401.
+5- Egea, J.A., Martí, R., & Banga, J.R. (2010). An evolutionary method for complex-process optimization.   Computers and Operations Research 37(2):315-324.
